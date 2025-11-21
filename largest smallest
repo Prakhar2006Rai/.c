@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int matrix[3][3],i,j,largest,smallest;
+    printf("Enter elements of the 3x3 matrix:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    largest = smallest = matrix[0][0];
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            if (matrix[i][j] > largest)
+                largest = matrix[i][j];
+            if (matrix[i][j] < smallest)
+                smallest = matrix[i][j];
+        }
+    }
+    printf("Largest element = %d\n", largest);
+    printf("Smallest element = %d\n", smallest);
+
+    return 0;
+}
