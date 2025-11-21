@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int a[3][3],i,j;
+    printf("enter 9 elements : ");
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++)
+         scanf("%d",&a[i][j]);
+    }
+         printf("\n row eise sum:\n");
+         for(i=0;i<3;i++){
+             int rsum=0;
+             for(j=0;j<3;j++)
+             rsum+=a[i][j];
+             printf("row %d sum = %d\n",i+1,rsum);
+         }
+         return 0;
+}
